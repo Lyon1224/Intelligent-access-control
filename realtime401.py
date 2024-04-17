@@ -106,7 +106,7 @@ while True:
                 if last_saved_time is None or (current_time - last_saved_time).total_seconds() >= 60:
                     # 保存图像帧到本地
                     unknown_person_counter += 1
-                    image_path = os.path.join(unknown_person_folder, f"unknown_person_{unknown_person_counter}.jpg")
+                    image_path = os.path.join(unknown_person_folder, f"{current_time}_unknown_person_{unknown_person_counter}.jpg")
                     cv2.imwrite(image_path, frame)
 
                     # 更新上一次保存时间
